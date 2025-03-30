@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+   body {
+            background-color: #333;
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            min-height: 100vh; 
+}
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f4f4f9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.container:hover{
+    transform: scale(1.1) translateZ(20px);
+    transition-duration: 1.5s;
+}
+.container h1 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #333;
+}
+.booking-form {
+    display: flex;
+    flex-direction: column;
+}
+.booking-form label {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.booking-form input[type="text"],
+.booking-form input[type="date"],
+.booking-form input[type="number"],
+.booking-form input[type="tel"],
+.booking-form input[type="time"],
+.booking-form select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+.booking-form select {
+    cursor: pointer;
+}
+.booking-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.booking-form button:hover {
+    background-color: #45a049;
+    transform: scale(1.1) translateZ(20px);
+    transition-duration: 1.5s;
+   
+}
+    </style>
+    <div class="container">
+        <h1>CINEMA TICKET BOOKING</h1>
+        <form class="booking-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            <label for="Phone number">Phone number</label>
+            <input type="tel "id="Phonenumber" name="Phone number" maxlength="10" placeholder="Enter your Phone Number" required>
+            <label for="movies">Movies</label>
+            <select id="event" name="event" required>
+                <option value="" disabled selected>Choose an event</option>
+                <option value="NAVAGRAHA">NAVAGRAHA</option>
+                <option value="TITANI">TITANI</option>
+                <option value="LEO">TAMIL</option>
+                <option vaue="">HINDI</option>
+            </select>
+            <label for="event">Select Language</label>
+            <select id="event" name="event" required>
+                <option value="" disabled selected>Choose a Language</option>
+                <option value="kannada">KANNADA</option>
+                <option value="ENGLISH">ENGLISH</option>
+                <option value="tamil">TAMIL</option>
+                <option vaue="hindi">HINDI</option>
+            </select>
+            <label for="date">Event Date:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time"  required>
+            <label for="tickets">Number of Tickets:</label>
+            <input type="number" id="tickets" name="tickets" min="1" max="10" value="1" required>
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+</body>
+</html>
